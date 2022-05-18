@@ -3,7 +3,8 @@ const ethUtil = require('ethereumjs-util')
 const sigUtil = require('eth-sig-util')
 const { TransactionFactory } = require('@ethereumjs/tx');
 const type = 'WalletConnect'
-const BRIDGE_URL = 'http://localhost:3000'  //walletconnect-connect test server
+const BRIDGE_URL = 'https://toporin.github.io/WalletConnect-Bridge/' // prod server
+//const BRIDGE_URL = 'http://localhost:3000'  //walletconnect-connect local test server
 //const rlp = require('rlp') // todo: remove (unused)
 
 class WalletConnectKeyring extends EventEmitter {
@@ -16,7 +17,7 @@ class WalletConnectKeyring extends EventEmitter {
     this.perPage = 5
     this.unlockedAccount = 0
     this.iframe = null
-    this.addressList = []; // DEBUG
+    this.addressList = []; 
     this.deserialize(opts)
     this._setupIframe()
     console.warn('In eth-walletconnect-keyring: WalletConnectKeyring constructor: END')
