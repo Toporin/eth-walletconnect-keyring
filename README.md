@@ -2,7 +2,7 @@
 
 Keyring wrapper on [walletconnect v1.0](https://docs.walletconnect.com/).
 
-An implementation of MetaMask's [Keyring interface](https://github.com/MetaMask/eth-simple-keyring#the-keyring-class-protocol), that uses the WalletConnect  protocol to send request to a wallet client for all cryptographic operations.
+An implementation of MetaMask's [Keyring interface](https://github.com/MetaMask/eth-simple-keyring#the-keyring-class-protocol), that uses the WalletConnect  protocol to send requests to a wallet client for all cryptographic operations.
 When using a WalletConnect keyring for performing some actions, MetaMask will open a new tab which will allow the user to initiate a WalletConnect connection to a compatible wallet such as [Satochip-Bridge](https://github.com/Toporin/Satochip-Bridge).
 The new tab opens a react application ([WalletConnect-Bridge](https://github.com/Toporin/WalletConnect-Bridge)) that will manage the WalletConnect connection.
 
@@ -30,11 +30,11 @@ there are a few others:
 
 - **setAccountToUnlock** : the index of the account that you want to unlock in order to use with the signTransaction and signPersonalMessage methods
 
-- **getFirstPage** : returns the first ordered set of accounts from the TREZOR account
+- **getFirstPage** : returns the first ordered set of accounts from the WalletConnect account
 
-- **getNextPage** : returns the next ordered set of accounts from the TREZOR account based on the current page
+- **getNextPage** : returns the next ordered set of accounts from the WalletConnect account based on the current page
 
-- **getPreviousPage** : returns the previous ordered set of accounts from the TREZOR account based on the current page
+- **getPreviousPage** : returns the previous ordered set of accounts from the WalletConnect account based on the current page
 
 - **forgetDevice** : removes all the device info from memory
 
